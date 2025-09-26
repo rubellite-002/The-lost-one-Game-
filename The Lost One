@@ -1,0 +1,207 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+#include <cstdlib>
+using namespace std;
+int main() {
+    
+   
+    
+    cout<<" _______    __    __    ______  "<<endl;
+    cout<<"|__   __|  |  |  |  |  | _____| "<<endl;
+    cout<<"   | |     |   ==   |  | =====| "<<endl;
+    cout<<"   |_|     |__|  |__|  |_=====| "<<endl;
+    cout<<endl;
+    cout<<"            LOST ONE"<<endl;
+    cout<<endl;
+    cout<<endl;
+    //ievads
+    cout<<"Tu pamosties.."<<endl;
+    cout<<"Viss ir tumšs..."<<endl;
+    cout<<"Tālumā patādās gaismiņa."<<endl;
+    //gaisma
+    cout<<"(?) Vai iet uz gaismu? jā/nē "<<endl;
+    cout<<"Izvēle: ";
+    string gaisma;
+    cin>>gaisma;
+    if(gaisma == "jā"){
+        cout<<"Tu ej uz gaismu. Nonākot galā iegaugi laizgektu lāpu."<<endl;
+        cout<<endl;
+        cout<<"(?) Vai paņemsi lāmu? jā/nē"<<endl;
+        cout<<"Izvēle: ";
+        string NemtLaapu;
+        cin>>NemtLaapu;
+        if(NemtLaapu == "jā"){
+            
+            cout<<"Tu paņēmi lāpu. Tā ir karsta, laikas, ka tā tevi sadedzinās. Tu saproti, ka esi alā, sienas ir mitras un aukstas. Tu ieraugi krustceles."<<endl;
+            cout<<endl;
+            cout<<"(?) Kur iet? palabi/ pakreisi/nekur"<<endl;
+            cout<<"Izvēle: ";
+            string krustceles1;
+            cin>>krustceles1;
+            if(krustceles1 == "pakreisi"){
+                //sāk plūst ūdens
+                cout<<"Tu uzmanīgi ej pa alas mitro grīdu. Sajūti, ka zeme nav tikai mirsa, bet tagad jau klāta ir ledaini aukstu  ūdens kārtu.";
+                cout<<endl;
+                cout<<"(?) Kur dosies? uzPriekšu/atpakaļ";
+                cout<<"Izvēle: ";
+                string VaiAtpakaļ;
+                cin>>VaiAtpakaļ;
+                if(VaiAtpakaļ=="uzPriekšu"){
+                    
+                    cout<<"Tu izvēlies turpināt ceļu. Ūdens līmenis."<<endl;
+                    cout<<"Tev piekājām pieduras lauznis, kas tika atnests ar atraujo ūdens plūsmu."<<endl;
+                    cout<<endl;
+                    cout<<"(?) Vai paņemt lauzni? jā/nē"<<endl;
+                    cout<<"Izvēle: ";
+                    string lauzni;
+                    cin>>lauzni;
+                    if(lauzni =="jā"){
+                        cout<<"Tu paņem lauzni un turpini ceļu."<<endl;
+                        cout<<"Tu nonāc līdz durvīm, bet tās ir cieši aizslēgtas ar slēdzeni."<<endl;
+                        cout<<"Ūdens jau ir līdz gurniem, laika ir maz.."<<endl;
+                        cout<<endl;
+                        cout<<"(?) Vai mēģināsi atliast durvis? jā/nē"<<endl;
+                        cout<<"Izvēle: ";
+                        string durvis;
+                        cin>>durvis;
+                        if(durvis=="jā"){
+                            //mēģīnāt atlaust durvis
+                            cout<<"Tu mini, ka tev ir aptuveni 3min laika līdz ala ir pilna ar ūdeni.";
+                            int roll1=0;
+                            int durvis =18;//durvis HP
+                            string roll;
+                            int l=3;
+                            for(int i=3; roll1<durvis;i--){
+                                cout<<endl;
+                                cout<<"Roll for damage."<<endl;
+                                cout<<"Will you roll for damage? jā/nē";
+                                cout<<endl;
+                                cout<<"Izvēle: ";
+                                cin>>roll;
+                                if(roll=="jā"){
+                                    int roll1= rand()%31;
+                                    cout<<endl;
+                                    cout<<"You did "<<roll1<<" damage";
+                                    cout<<"Tev ir atlikušas "<<i<<" minūtes."<<endl;
+                                    l--;
+                                } else{
+                                    //The drowned ending3
+                                    cout<<"Tu padevies."<<endl;
+                                    cout<<endl;
+                                    cout<<"END"<<endl;
+                                    cout<<"The drowned ending";
+                                    
+                                    return 0;
+                                }
+                            }
+                            if(l=0 && roll1<durvis){
+                                //Tried and failed ending
+                                cout<<"END"<<endl;
+                                cout<<"Tried and failed ending";
+                                
+                                return 0;
+                            } else{
+                                cout<<"Tu atlauzi durvis. Tu esi brīvs."<<endl;
+                                cout<<endl;
+                                cout<<"YOU WIN";
+                                
+                                return 0;
+                            }
+                            
+                        }else{
+                            cout<<endl;
+                            cout<<"(?) Vai esi pārliecināts? jā/nē";
+                            cout<<"Izvēle: ";
+                            string NoHope;
+                            cin>>NoHope;
+                            if (NoHope =="nē"){
+                                //EEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
+                            } else{
+                                //The drowned ending (gave up)
+                           cout<<"Tu padodies, uzskatot, ka nevarēsi atlaust durvis."<<endl;
+                            cout<<"Tu esi zudējis cerību."<<endl;
+                            cout<<endl;
+                            cout<<"END"<<endl;
+                            cout<<"The drowned ending"; 
+                            }
+                            
+                        }
+                    } else{
+                        //The drowned ending2
+                        cout<<"Tu nepaņēmi lauzni un turpināji ceļu."<<endl;
+                        cout<<"Pēc brīža tu nonāki strupceļā, bet pamani durvis ar slēdzeni. Tu vēlies tās atvērt, bet tās ir cieši aizslēgtas. Atvimies, ka sastapi lauzni, bet nekur nav redzams un ūdens ir līdz krūtīm."<<endl;
+                        cout<<"Cerību nav."<<endl;
+                        cout<<endl;
+                        cout<<"END"<<endl;
+                        cout<<"The drowned ending";
+                    }
+                } else{
+                    cout<<"Tu pagriezies atpakaļ. Tu sāc skriet, nojaušot, ka kaut kas biedējošs tuvojas. Tu iesktien krustcelēs."<<endl;
+                    cout<<"(?) Kur turpināt skriet? paLabi/paKreisi";
+                    cout<<"Izvēle: ";
+                    string skriet;
+                    cin>>skriet;
+                    if(skriet=="paLabi"){
+                        //The drowned ending
+                        cout<<"Tu nokļūsti strupceļā, bet ūdens jau ir līdz krūtīm.Nav laika, nav izejas. Un tu neproti peldēt."<<endl;
+                        cout<<"Ūdens ceļas.."<<endl;
+                        cout<<endl;
+                        cout<<"END"<<endl;
+                        cout<<"The drowned ending";
+                    } else{
+                        //Falldamage ending2
+                        cout<<"Tu skrien, bet neskaties uz ceļū."<<endl;
+                        cout<<"Tu sāc krist.. Strauji un ātri."<<endl;
+                        cout<<"Tu iekriti aizā."<<endl;
+                        cout<<endl;
+                        cout<<"END"<<endl;
+                        cout<<"Falldamage ending";
+                    }
+                }
+            } else if (krustceles1 == "palabi"){
+                //iekrīti aizā ending
+                cout<<"Tu ej pa alu, viss ir slidens. Pakrīti."<<endl;
+                cout<<"Tu krīti ilgi, pārsteidzoši ilgi."<<endl;
+                cout<<"Tu iekriti aizā, ko lāpas vājā gaisma nespē atklāt no tumsas."<<endl;
+                cout<<endl;
+                cout<<"END"<<endl;
+                cout<<"Falldamage ending";
+            } else{
+                //The coward ending 2 ar lāpu
+            
+            cout<<"Tu turi lāpu, pēc laika lāpa izdziest."<<endl;
+            cout<<"Viss ir tumšs, nav nekripatiņas gaismas."<<endl;
+            cout<<"Tu tausties apkāt bet izeju neatrodi."<<endl;
+            cout<<"Viss ir auksts un tumšs, nav ne ēdiena, ne dzēriena, nevienas dzīvas radības. Viss ko vari dzirdēt ir sava elpa."<<endl;
+            cout<<"Tu jūti, ka mirsti. Bet tu esi viens."<<endl;
+            cout<<"END"<<endl;
+            cout<<"The cowardly ending.";
+            }
+        } else{
+            //The coward ending
+            cout<<endl;
+            cout<<"Tu sēdi pie lāpas, pēc laika lāpa izdziest."<<endl;
+            cout<<"Viss ir tumšs, nav nekripatiņas gaismas."<<endl;
+            cout<<"Tu tausties apkāt bet izeju neatrodi."<<endl;
+            cout<<"Viss ir auksts un tumšs, nav ne ēdiena, ne dzēriena, nevienas dzīvas radības. Viss ko vari dzirdēt ir sava elpa."<<endl;
+            cout<<"Tu jūti, ka mirsti. Bet tu esi viens."<<endl;
+            cout<<"END"<<endl;
+            cout<<"The cowardly ending.";
+        }
+        
+    } else{
+        //The bad ending
+        cout<<endl;
+        cout<<"Tu neej uz gaismu, pēc laika gaismiņa izdziest."<<endl;
+        cout<<"Viss it tumšs, nav nekripatiņas gaismas."<<endl;
+        cout<<"Tu tausties apkāt bet izeju neatrodi."<<endl;
+        cout<<"Viss ir auksts un tumšs, nav ne ēdiena, ne dzēriena, nevienas dzīvas radības. Viss ko vari dzirdēt ir sava elpa."<<endl;
+        cout<<"Tu jūti, ka mirsti. Bet tu esi viens."<<endl;
+        cout<<endl;
+        cout<<"END"<<endl;
+        cout<<"The bad ending.";
+    }
+    
+    
+    return 0;
+}
